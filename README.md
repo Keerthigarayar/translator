@@ -3,3 +3,16 @@ complete web-based Language Translator application using Java with Spring Boot a
 
 * application.properties
      spring.thymeleaf.cache=false
+
+
+  
+
+Instructions to Run the Project
+Set Up Your Environment:
+• Ensure you have Java (JDK 17 or higher) and Maven installed on your
+machine.
+Create the Project Directory:
+Create a directory named *language _ translator* and create the files
+as per the structure mentioned above.
+Install Dependencies:
+• Navigate to the project directory and run:
