@@ -16,3 +16,13 @@ Create a directory named *language _ translator* and create the files
 as per the structure mentioned above.
 Install Dependencies:
 • Navigate to the project directory and run:
+  Navigate to the project directory and run:
+bash
+mvn clean install
+
+Run the Application:
+Start the Spring Boot application by running:
+bash
+mvn spring-boot:run
+
+Open your web browser and go to http://localhost:8080.
