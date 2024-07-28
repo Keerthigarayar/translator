@@ -15,29 +15,9 @@ language_translator/
 │   │       ├── application.properties
 │   │       └── templates/
 │   │           └── index.html
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── example/
-│                   └── translator/
-│                       └── LanguageTranslatorApplicationTests.java
-└── pom.xmllanguage_translator/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           └── translator/
-│   │   │               ├── LanguageTranslatorApplication.java
-│   │   │               ├── controller/
-│   │   │               │   └── TranslatorController.java
-│   │   │               └── service/
-│   │   │                   └── TranslationService.java
-│   │   └── resources/
-│   │       ├── application.properties
-│   │       └── templates/
-│   │           └── index.html
+│   │       └── static/
+│   │           ├── style.css
+│   │           └── script.js
 │   └── test/
 │       └── java/
 │           └── com/
