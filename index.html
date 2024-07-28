@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 48%;
+            margin-right: 2%;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translator</h1>
+        <form action="/translate" method="POST">
+            <textarea name="inputText" placeholder="Enter text to translate..." required></textarea>
+            <div>
+                <select name="srcLang" required>
+                    <option value="">Select Source Language</option>
+                    <th:block th:each="(key, value) : ${languages}">
+                        <option th:value="${key}" th:text="${value}"></option>
+                    </th:block>
+                </select>
+                <select name="destLang" required>
+                    <option value="">Select Destination Language</option>
+                    <th:block th:each="(key, value) : ${languages}">
+                        <option th:value="${key}" th:text="${value}"></option>
+                    </th:block>
+                </select>
+            </div>
+            <button type="submit">Translate</button>
+        </form>
+        <h2>Translated Text:</h2>
+        <p th:text="${translatedText}"></p>
+    </div>
+</body>
+</html>
